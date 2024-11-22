@@ -134,8 +134,11 @@ export default function App() {
           <Button
             type="t3"
             text="back"
-            pressHandler={() =>
-              setDisplay(display.substring(0, display.length - 1))
+            pressHandler={() => {
+              try {
+                setDisplay(display.substring(0, display.length - 1))
+              } catch { }
+            }
             }
           />
           <Button
